@@ -3,6 +3,7 @@ use std::collections::HashMap;
 
 pub fn solve() {
     println!("\n*************   Day - 1 ******************");
+    
     let txtPath = [env!("CARGO_MANIFEST_DIR"), "/inputs/day1.input.txt"].join("");
     let contents = fs::read_to_string(txtPath).expect("err reading file");
     let arr = contents.split("\n");
