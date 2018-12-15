@@ -15,8 +15,8 @@ pub fn solve() {
     let mut fabricOverlap: [[bool; 1000]; 1000] = [[false; 1000]; 1000];
     let mut totalSquareInches = 0;
     let mut overlapMap = HashMap::new();
+    let re = Regex::new(r"#(\d+) @ (\d+),(\d+): (\d+)x(\d+)").unwrap();
     for line in &arr {
-        let re = Regex::new(r"#(\d+) @ (\d+),(\d+): (\d+)x(\d+)").unwrap();
         let mut id: i32 = -1;
         let mut x: i32 = 0;
         let mut y: i32 = 0;

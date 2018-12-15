@@ -9,4 +9,5 @@ fn main() {
     solution::day2::solve();
     solution::day3::solve();
     solution::day4::solve();
+    solution::day5::solve();
 }
