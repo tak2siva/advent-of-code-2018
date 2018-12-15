@@ -5,3 +5,4 @@ authors = ["Shiva"]
 
 [dependencies]
 regex = "1"
+lazy_static = "1.2.0"
