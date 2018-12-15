@@ -76,5 +76,19 @@ pub fn solve() {
             maxSleepOverlap = val.clone();
         }
     }
+
+    let mut maxSleepOverlapGlobal = 0;
+    let mut maxSleepOverlapGlobalPos = 0;
+    let mut maxSleepOverlapGlobalGid: String = "".to_string();
+    for (gId, arr) in sleepLogRef.into_iter() {
+        for x in 0..61 {
+            if arr[x].clone() > maxSleepOverlapGlobal {
+                maxSleepOverlapGlobal = arr[x] as i32;
+                maxSleepOverlapGlobalGid = gId.clone();
+                maxSleepOverlapGlobalPos = x;
+            }
+        }
+    }
     println!("Part 1 Solution: {}", maxSleeper.parse::<i32>().unwrap() * bestTime);
+    println!("Part 2 Solution: {}", maxSleepOverlapGlobalGid.parse::<i32>().unwrap() * maxSleepOverlapGlobalPos as i32);
 }
